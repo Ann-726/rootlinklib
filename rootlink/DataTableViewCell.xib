@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="DataTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="温度" translatesAutoresizingMaskIntoConstraints="NO" id="xiD-7H-JoX">
+                        <rect key="frame" x="30" y="10.5" width="48" height="48.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="xiD-7H-JoX" secondAttribute="height" multiplier="1:1" id="dqA-6d-5BA"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hlD-y5-ML2">
+                        <rect key="frame" x="90" y="10" width="200" height="49.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdP-HO-5O4">
+                                <rect key="frame" x="10" y="0.0" width="185" height="49.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="IdP-HO-5O4" secondAttribute="bottom" id="GI2-tf-7m0"/>
+                            <constraint firstItem="IdP-HO-5O4" firstAttribute="top" secondItem="hlD-y5-ML2" secondAttribute="top" id="fRM-JT-4Ba"/>
+                            <constraint firstAttribute="trailing" secondItem="IdP-HO-5O4" secondAttribute="trailing" constant="5" id="h2c-8H-kyf"/>
+                            <constraint firstItem="IdP-HO-5O4" firstAttribute="leading" secondItem="hlD-y5-ML2" secondAttribute="leading" constant="10" id="put-M6-z4J"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="xiD-7H-JoX" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.7" id="AMI-Om-ofd"/>
+                    <constraint firstAttribute="trailing" secondItem="hlD-y5-ML2" secondAttribute="trailing" constant="30" id="Pht-Kg-LKe"/>
+                    <constraint firstItem="xiD-7H-JoX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="PzR-dF-hyt"/>
+                    <constraint firstItem="hlD-y5-ML2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="kkf-pd-75E"/>
+                    <constraint firstItem="hlD-y5-ML2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="90" id="qjI-zv-xun"/>
+                    <constraint firstAttribute="bottom" secondItem="hlD-y5-ML2" secondAttribute="bottom" constant="10" id="qwd-yL-BhP"/>
+                    <constraint firstItem="xiD-7H-JoX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="wBt-RM-o9h"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="contentLabel" destination="IdP-HO-5O4" id="6cU-d0-JI7"/>
+                <outlet property="imageView" destination="xiD-7H-JoX" id="2An-mk-I7p"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="温度" width="30" height="30"/>
+    </resources>
+</document>

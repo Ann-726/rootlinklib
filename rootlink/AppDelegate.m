@@ -2,12 +2,11 @@
 //  AppDelegate.m
 //  rootlink
 //
-//  Created by cocoa on 2018/7/25.
 //  Copyright © 2018年 rootlink. All rights reserved.
 //
 
 #import "AppDelegate.h"
-
+#import "ViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +15,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor=[UIColor whiteColor];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc]init]];
+    nav.navigationBar.barTintColor = [UIColor colorWithRed:50/255.0 green:185/255.0 blue:170/255.0 alpha:1];
+    nav.navigationBar.tintColor = [UIColor whiteColor];
+    nav.navigationBar.titleTextAttributes=@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:20]};
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
